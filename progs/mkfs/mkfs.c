@@ -65,7 +65,7 @@ static void mkfs_print_usage(char *name) {
 		"  -f, --force                   makes mkfs to use whole disk, not\n"
 		"                                block device or mounted partition.\n"
 		"  -d, --discard                 tells mkfs to discard given device\n"
-		"                                before creating the filesystem.\n");
+		"                                before creating the filesystem (for SSDs).\n");
 }
 
 /* Initializes used by mkfs exception streams */
@@ -447,7 +447,6 @@ int main(int argc, char *argv[]) {
 				goto error_free_device;
 			}
 		}
-
 		if (flags & BF_DISCARD) {
 			if (gauge) {
 				aal_gauge_rename(gauge, "Discarding %s ... ",

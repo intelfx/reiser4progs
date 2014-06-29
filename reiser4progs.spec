@@ -1,7 +1,7 @@
 %define enable_debug 1
 
 Name: reiser4progs
-Version: 1.0.8
+Version: 1.0.9
 Release: 1
 Summary: Utilities for reiser4 filesystems
 License: GPL
